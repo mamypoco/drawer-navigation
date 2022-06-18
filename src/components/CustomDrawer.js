@@ -15,47 +15,20 @@ import {
 
 const CustomDrawer = (props) => {
    return (
-      // <View style={{ flex: 1 }}>
-      //    <DrawerContentScrollView
-      //       {...props}
-      //       contentContainerStyle={{ backgroundColor: "#F5DF99" }}
-      //    >
-      //                   <Image
-      //          source={require("../images/cocoa_logo8.jpg")}
-      //          style={{
-      //             height: 80,
-      //             width: 170,
-      //             margin: 20,
-      //          }}
-      //       />
-      //       <DrawerItemList {...props} />
-      //    </DrawerContentScrollView>
-      //    <View>
-      //       <Text>Our Custom Text</Text>
-      //    </View>
-      // </View>
-
-      <ScrollView>
-         <SafeAreaView
-            style={styles.container}
-            forceInset={{ top: "always", horizontal: "never" }}
-         >
+      <View style={{ flex: 1 }}>
+         <DrawerContentScrollView {...props}>
             <View style={styles.drawerHeader}>
-               <View style={{ flex: 1 }}>
-                  <Image
-                     source={require("../images/cocoa_logo8.jpg")}
-                     style={styles.drawerImage}
-                  />
-               </View>
-               <View style={{ flex: 2 }}>
-                  {/* <Text style={styles.drawerHeaderText}>Nucamp</Text> */}
-               </View>
+               <Image
+                  source={require("../images/cocoa_logo8.jpg")}
+                  style={styles.drawerImage}
+               />
             </View>
-            <View style={styles.drawerItemList}>
-               <DrawerItemList {...props} />
-            </View>
-         </SafeAreaView>
-      </ScrollView>
+            <DrawerItemList {...props} />
+         </DrawerContentScrollView>
+         <View>
+            <Text>Our Custom Text</Text>
+         </View>
+      </View>
    );
 };
 
@@ -64,7 +37,7 @@ const styles = StyleSheet.create({
       flex: 1,
    },
    drawerHeader: {
-      backgroundColor: "#205375",
+      backgroundColor: "#BB8760",
       height: 140,
       alignItems: "center",
       justifyContent: "center",
@@ -75,9 +48,6 @@ const styles = StyleSheet.create({
       color: "#fff",
       fontSize: 24,
       fontWeight: "bold",
-   },
-   drawerItemList: {
-      backgroundColor: "#FFE3A9",
    },
 
    drawerImage: {

@@ -18,6 +18,12 @@ function AppNavigation() {
          <Drawer.Navigator
             drawerContent={(props) => <CustomDrawer {...props} />}
             initialRouteName="Home"
+            screenOptions={{
+               drawerStyle: {
+                  backgroundColor: "#FFEBC1",
+                  width: 240,
+               },
+            }}
          >
             <Drawer.Screen name="Home" component={HomeScreen} />
             <Drawer.Screen name="Book a Visit" component={BookAVisitScreen} />
